@@ -53,11 +53,11 @@ class Server:
         (and defaults) as get_page and returns a dictionary containing
         the following key-value pairs"""
         total_pages: int = len(self.dataset())
-        if page > total_pages:
+        if page + 1 > total_pages:
             next_page = None
         else:
             next_page = page + 1
-        if page < 1:
+        if page - 1 < 1:
             prev_page = None
         else:
             prev_page = page - 1
