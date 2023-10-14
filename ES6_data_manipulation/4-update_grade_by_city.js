@@ -6,7 +6,7 @@ export default function updateStudentGradeByCity(studentList, city, newGrades) {
       if (newGrade) {
         return {
           ...student,
-          grade: newGrade.grade
+          grade: newGrade.grade,
         };
       }
       return {
